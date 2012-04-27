@@ -81,9 +81,9 @@ function gitPrompt {
 # Red prompt for root
 case $UID in 
 0)
-  export PS1="${txtred}\u@\h:${txtgrn}\w${txtpur}\$(gitPrompt)${txtgrn}▶${txtwht} "
+  export PS1="\[\033[G\]${txtred}\u@\h:${txtgrn}\w${txtpur}\$(gitPrompt)${txtgrn}▶${txtwht} "
   ;;
 *)
-  export PS1="${txtpur}\u@\h:${txtgrn}\w${txtpur}\$(gitPrompt)${txtgrn}▶${txtwht} "
+  export PS1="\[\033[G\]${txtpur}\u@\h:${txtgrn}\w${txtpur}\$(gitPrompt)${txtgrn}▶${txtwht} "
   ;;
 esac
