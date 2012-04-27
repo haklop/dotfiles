@@ -8,6 +8,7 @@
   hist = log --graph --date=short --pretty=format:\"%C(yellow)%h %C(green)%ad%C(reset) |%C(cyan)%d%C(reset) %s (%C(red)%an%C(reset))\"
   type = cat-file -t
   dump = cat-file -p
+  sdiff = diff --staged
 [color]
   diff = auto
   status = auto
