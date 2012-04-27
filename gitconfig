@@ -8,3 +8,15 @@
   hist = log --graph --date=short --pretty=format:\"%C(yellow)%h %C(green)%ad%C(reset) |%C(cyan)%d%C(reset) %s (%C(red)%an%C(reset))\"
   type = cat-file -t
   dump = cat-file -p
+[color]
+  diff = auto
+  status = auto
+  branch = auto
+[color "status"]
+  added = green
+  changed = blue
+  untracked = red 
+[color "diff"]
+  meta = yellow
+  old = red 
+  new = green
