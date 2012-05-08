@@ -4,8 +4,13 @@ HISTFILESIZE=2000
 # append to the history file, don't overwrite it
 shopt -s histappend
 
-alias ll='ls -l'
-alias l='ls -al'
+alias dir='dir --color=auto'
+alias vdir='vdir --color=auto'
+alias grep='grep --color=auto'
+alias fgrep='fgrep --color=auto'
+alias egrep='egrep --color=auto'
+alias ll='ls -li --color=auto'
+alias l='ls -al --color=auto'
 alias vi=vim
 alias please=sudo
 ignoreeof=1
