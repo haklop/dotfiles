@@ -6,13 +6,15 @@
   rb = rebase
   fe = fetch
   undo = reset --hard
-  wtfchanged = log --stat --find-renames --pretty=format:\"%C(yellow)%h%C(cyan)%d%C(reset) (%ar - %C(red)%an%C(reset)) %n%B\"
+  l = log --stat --find-renames --pretty=format:\"%C(yellow)%h%C(cyan)%d%C(reset) (%ar - %C(red)%an%C(reset)) %n%B\"
   hist = log --graph --date=short --pretty=format:\"%C(yellow)%h %C(green)%ad%C(reset) |%C(cyan)%d%C(reset) %s (%C(red)%an%C(reset))\"
   type = cat-file -t
   dump = cat-file -p
   sdiff = diff --staged
+  fp = format-patch --stdout
 [core]
   editor = vim
+  excludesfile = ~/.gitignore
 [color]
   diff = auto
   status = auto
