@@ -27,3 +27,10 @@
   meta = yellow
   old = red 
   new = green
+[push]
+  default = current
+[diff]
+  renames = copies
+  mnemonicprefix = true
+[branch]
+  autosetupmerge = true
