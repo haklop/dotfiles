@@ -12,6 +12,9 @@
   dump = cat-file -p
   sdiff = diff --staged
   fp = format-patch --stdout
+  todo = grep -ie todo -ie fixme
+  ff = !git rb `git rev-parse --abbrev-ref --symbolic-full-name @{u}`
+  update = !git fe && git ff
 [core]
   editor = vim
   excludesfile = ~/.gitignore
