@@ -1,3 +1,10 @@
+# Source global definitions
+if [ -f /etc/bashrc ]; then
+  . /etc/bashrc
+fi
+
+# User specific aliases and functions
+
 HISTSIZE=1000
 HISTFILESIZE=2000
 
