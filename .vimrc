@@ -21,7 +21,7 @@ set linebreak
 set showbreak=▹
 
 " Auto indent what you can
-set autoindent
+" set autoindent
 
 " Searching
 set ignorecase
