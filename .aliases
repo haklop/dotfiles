@@ -1,0 +1,18 @@
+# Colored ls output
+alias ls='ls -G'
+alias ll='ls -Gl'
+alias l='ls -Gal'
+alias la='ls -Ga'
+alias lsa='ls -Ga'
+
+# cd shortcut
+alias ..='cd ..'
+alias ...='cd ../..' 
+
+# remove git noises
+alias gpo='git push origin'
+
+alias vi='vim'
+alias mkdir='mkdir -p'
+alias tree='tree -C'
+alias reload='source ~/.bash_profile'

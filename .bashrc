@@ -3,24 +3,17 @@ if [ -f /etc/bashrc ]; then
   . /etc/bashrc
 fi
 
-# User specific aliases and functions
+# Enable bash completion.
+if [ -f /etc/bash_completion ]; then
+ source /etc/bash_completion
+elif [ -f $(brew --prefix)/etc/bash_completion ]; then
+    . $(brew --prefix)/etc/bash_completion
+fi
 
-HISTSIZE=1000
-HISTFILESIZE=2000
-
-# append to the history file, don't overwrite it
-shopt -s histappend
-
-alias dir='dir --color=auto'
-alias vdir='vdir --color=auto'
-alias grep='grep --color=auto'
-alias fgrep='fgrep --color=auto'
-alias egrep='egrep --color=auto'
-alias ll='ls -li --color=auto'
-alias l='ls -al --color=auto'
-alias vi=vim
-alias please=sudo
-ignoreeof=1
+# Source .aliases file
+if [ -f ~/.aliases ]; then
+  source ~/.aliases
+fi
 
 # Stolen from Arch wiki
 txtblk='\[\e[0;30m\]' # Black - Regular
@@ -57,52 +50,8 @@ bakcyn='\[\e[46m\]'   # Cyan
 bakwht='\[\e[47m\]'   # White
 txtrst='\[\e[0m\]'    # Text Reset
 
-function gitRepoFlags {
-  branch=$(__git_ps1)
-  if [ -z "${branch}" ]; then
-    return 1
-  fi
+export GIT_PS1_SHOWDIRTYSTATE=true
+export GIT_PS1_SHOWUNTRACKEDFILES=true
+export GIT_PS1_SHOWSTASHSTATE=true
 
-  rootDir=$(git rev-parse --show-toplevel)
-
-  untracked=$(git ls-files --other --exclude-standard ${rootDir} | wc | awk '{print $1}' 2> /dev/null)
-  modified=$(git ls-files --modified ${rootDir} | wc | awk '{print $1}' 2> /dev/null)
-  staged=$(git diff --name-only --staged | wc | awk '{print $1}' 2> /dev/null)
-
-  str=""
-
-  if [ "${staged}" != "0" ]; then 
-    str="${str}ˢ"
-  fi
-
-  if [ "${untracked}" != "0" ]; then 
-    str="${str}ᵘ"
-  fi
-
-  if [ "${modified}" != "0" ]; then 
-    str="${str}ᵐ"
-  fi
-
-  echo -n "${str}"
-}
-
-function gitPrompt {
-  __git_ps1 " (%s$(gitRepoFlags))"
-}
-
-# Red prompt for root
-case $UID in 
-0)
-  export PS1="\[\033[G\]${txtred}\u@\h:${txtgrn}\w${txtpur}\$(gitPrompt)${txtgrn}▶${txtwht} "
-  ;;
-*)
-  export PS1="\[\033[G\]${txtpur}\u@\h:${txtgrn}\w${txtpur}\$(gitPrompt)${txtgrn}▶${txtwht} "
-  ;;
-esac
-
-# enable programmable completion features (you don't need to enable
-# this, if it's already enabled in /etc/bash.bashrc and /etc/profile
-# sources /etc/bash.bashrc).
-if [ -f /etc/bash_completion ] && ! shopt -oq posix; then
-    . /etc/bash_completion
-fi
+export PS1="\u@\h:${txtgrn}\w${txtwht}\$ "
