@@ -46,11 +46,6 @@ set expandtab
 " Disable mouse
 set mouse=
 
-" Colorscheme
-if &t_Co == 256
-  color xoria256
-endif
-
 " Switch tabs
 map 8 <Esc>:tabe 
 map 9 gT
