@@ -3,6 +3,8 @@ if [ -f /etc/bashrc ]; then
   . /etc/bashrc
 fi
 
+export PATH="/usr/local/bin:"$PATH
+
 # Enable bash completion.
 if [ -f /etc/bash_completion ]; then
  source /etc/bash_completion
