@@ -1,0 +1,9 @@
+<snippet>
+	<content><![CDATA[
+{% ifnot ${1:condition} %}
+	$SELECTION
+{% end %}
+]]></content>
+	<tabTrigger>nifn</tabTrigger>
+	<description>Insert a new Liquidrods ifnot tag</description>
+</snippet>

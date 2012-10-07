@@ -1,0 +1,7 @@
+<snippet>
+	<content><![CDATA[
+{% extends ${1:file}.html %}
+]]></content>
+	<tabTrigger>extends</tabTrigger>
+	<description>Insert an extends tag</description>
+</snippet>

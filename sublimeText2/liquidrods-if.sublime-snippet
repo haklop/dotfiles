@@ -1,0 +1,9 @@
+<snippet>
+	<content><![CDATA[
+{% if ${1:condition} %}
+	$SELECTION
+{% end %}
+]]></content>
+	<tabTrigger>nif</tabTrigger>
+	<description>Insert a new Liquidrods if tag</description>
+</snippet>

@@ -1,0 +1,9 @@
+<snippet>
+	<content><![CDATA[
+{% block ${1:content} %}
+	$SELECTION
+{% end %}
+]]></content>
+	<tabTrigger>nblock</tabTrigger>
+	<description>Insert a new Liquidrods block</description>
+</snippet>

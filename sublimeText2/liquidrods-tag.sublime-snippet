@@ -1,0 +1,9 @@
+<snippet>
+	<content><![CDATA[
+{% ${1:tag} ${2:parameter} %}
+	$SELECTION
+{% end %}
+]]></content>
+	<tabTrigger>ntag</tabTrigger>
+	<description>Insert a new Liquidrods tag</description>
+</snippet>
