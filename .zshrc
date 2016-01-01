@@ -4,7 +4,7 @@ export ZSH=$HOME/.oh-my-zsh
 
 ZSH_THEME="myavit"
 
-plugins=(git web-search colored-man colorize bundler catimg docker gem jsontools pip python ruby vagrant)
+plugins=(git autojump web-search colored-man colorize bundler catimg docker gem jsontools pip python ruby vagrant)
 
 source "$ZSH/oh-my-zsh.sh"
 
