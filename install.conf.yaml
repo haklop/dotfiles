@@ -4,12 +4,15 @@
     ~/.gitconfig: .gitconfig
     ~/.gitignore: .gitignore
     ~/.zshrc: .zshrc
-    ~/.oh-my-zsh/cutom/themes:
+    ~/.oh-my-zsh/custom/themes:
       create: true
       path: ohmyzsh/themes/
     ~/.atom/keymap.cson:
       create: true
       path: atom/keymap.cson
+    ~/.atom/config.cson:
+      create: true
+      path: atom/config.cson
 
 - shell:
   - [git submodule update --init --recursive, Installing submodules]

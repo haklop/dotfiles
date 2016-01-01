@@ -1,0 +1,7 @@
+"*":
+  core: {}
+  editor:
+    invisibles: {}
+    preferredLineLength: 120
+    showIndentGuide: true
+    showInvisibles: true
