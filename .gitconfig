@@ -25,10 +25,10 @@
 [color "status"]
   added = green
   changed = blue
-  untracked = red 
+  untracked = red
 [color "diff"]
   meta = yellow
-  old = red 
+  old = red
   new = green
 [push]
   default = current
@@ -37,3 +37,6 @@
   mnemonicprefix = true
 [branch]
   autosetupmerge = true
+[user]
+  name = Eric Bellemon
+  email = eric.bellemon@gmail.com
